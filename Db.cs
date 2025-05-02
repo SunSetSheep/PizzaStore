@@ -45,4 +45,9 @@ public class PizzaDB{
         }).ToList();
         return update;
     }
+    // Remove a pizza by its Id
+    public static void RemovePizza (int id)
+    {
+        _pizzas = _pizzas.FindAll(pizza => pizza.Id !=id).ToList();
+    }
 }
