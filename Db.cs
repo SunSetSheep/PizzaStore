@@ -31,4 +31,18 @@ public class PizzaDB{
         _pizzas.Add(pizza);
         return pizza;
     }
+    // Update a Pizza entry
+    public static Pizza UpdatePizza (Pizza update)
+    {
+        _pizzas = _pizzas.Select(pizza =>
+        {
+            if (pizza.Id == update.Id)
+            {
+                pizza.Name = update.Name;
+            }
+            return pizza;
+
+        }).ToList();
+        return update;
+    }
 }
