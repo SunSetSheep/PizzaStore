@@ -25,4 +25,10 @@ public class PizzaDB{
     {
         return _pizzas.SingleOrDefault(pizza => pizza.Id == id);
     }
+    // Create a new Pizza
+    public static Pizza CreatePizza (Pizza pizza)
+    {
+        _pizzas.Add(pizza);
+        return pizza;
+    }
 }
