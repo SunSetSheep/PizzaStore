@@ -20,4 +20,9 @@ public class PizzaDB{
     {
         return _pizzas;
     }
+    // Return Pizza based on the entered Id
+    public static Pizza? GetPizza (int id)
+    {
+        return _pizzas.SingleOrDefault(pizza => pizza.Id == id);
+    }
 }
